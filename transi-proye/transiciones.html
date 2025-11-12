@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Krediti</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f5f7fa;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #0078ff;
+      padding: 15px 30px;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 1.5rem;
+    }
+
+    /* Menú desplegable */
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 15px;
+    }
+
+    nav ul li {
+      position: relative;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 12px;
+      transition: background-color 0.3s;
+    }
+
+    nav ul li a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      border-radius: 6px;
+    }
+
+    /* Submenú */
+    nav ul li ul {
+      display: none;
+      position: absolute;
+      background-color: white;
+      color: #333;
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      top: 35px;
+      left: 0;
+    }
+
+    nav ul li:hover ul {
+      display: block;
+      animation: fadeIn 0.3s ease;
+    }
+
+    nav ul li ul li {
+      margin: 5px 0;
+    }
+
+    nav ul li ul li a {
+      color: #333;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(-10px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    /* Botón con transición */
+    .btn {
+      display: inline-block;
+      background-color: #0078ff;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin: 30px;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #005ec2;
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(0, 120, 255, 0.4);
+    }
+
+    /* Tarjeta con sombra */
+    .card {
+      background: white;
+      width: 280px;
+      margin: 40px auto;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .card:hover {
+      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+      transform: translateY(-5px);
+    }
+
+    .card h2 {
+      margin-bottom: 10px;
+      color: #0078ff;
+    }
+
+    .card p {
+      color: #555;
+      font-size: 0.9rem;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Krediti</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li>
+          <a href="#">Servicios ▾</a>
+          <ul>
+            <li><a href="#">Créditos</a></li>
+            <li><a href="#">Pagos</a></li>
+            <li><a href="#">Consultas</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <button class="btn">Solicitar Crédito</button>
+
+    <div class="card">
+      <h2>Tu Crédito Fácil</h2>
+      <p>Solicita tu crédito en minutos y recibe una respuesta rápida y segura con Krediti.</p>
+    </div>
+  </main>
+
+</body>
+</html>
